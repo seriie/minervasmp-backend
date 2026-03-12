@@ -17,7 +17,7 @@ app.use('/api', donationRoutes);
 app.use('/api', invoiceRoutes);
 app.use('/api', paypalRoutes);
 
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ status: 'healthy', message: 'Minerva SMP Backend is running (Modular JS)' });
 });
 
