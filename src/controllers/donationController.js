@@ -1,6 +1,6 @@
-const prisma = require('../config/prisma');
-const snap = require('../config/midtrans');
-const uuidv4 = require('uuid').v4;
+import prisma from '../config/prisma.js';
+import snap from '../config/midtrans.js';
+import { v4 as uuidv4 } from 'uuid';
 
 const createDonation = async (req, res) => {
   try {
@@ -77,7 +77,7 @@ const handleWebhook = async (req, res) => {
   }
 };
 
-module.exports = {
+export {
   createDonation,
   handleWebhook
 };

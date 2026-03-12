@@ -1,4 +1,4 @@
-const prisma = require('../config/prisma');
+import prisma from '../config/prisma.js';
 
 const createInvoice = async (req, res) => {
   try {
@@ -24,6 +24,4 @@ const createInvoice = async (req, res) => {
   }
 };
 
-module.exports = {
-  createInvoice
-};
+export { createInvoice };

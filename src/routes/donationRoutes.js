@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const donationController = require('../controllers/donationController');
+import * as donationController from '../controllers/donationController.js';
 
 router.post('/donate', donationController.createDonation);
 router.post('/midtrans-webhook', donationController.handleWebhook);
 
-module.exports = router
+export default router;

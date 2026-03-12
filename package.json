@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "postinstall": "prisma generate",
     "dev": "node --watch src/index.js",
@@ -12,7 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.3",
     "@prisma/client": "^6.19.2",

@@ -1,5 +1,6 @@
-const midtransClient = require('midtrans-client');
-require('dotenv').config({ override: true });
+import midtransClient from 'midtrans-client';
+import dotenv from 'dotenv';
+dotenv.config({ override: true });
 
 const snap = new midtransClient.Snap({
   isProduction: false,
@@ -7,4 +8,4 @@ const snap = new midtransClient.Snap({
   clientKey: (process.env.MIDTRANS_CLIENT_KEY || '').trim()
 });
 
-module.exports = snap;
+export default snap;

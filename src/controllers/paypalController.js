@@ -1,5 +1,5 @@
-const { client, paypal } = require("../config/paypal");
-const prisma = require('../config/prisma');
+import { client, paypal } from "../config/paypal.js";
+import prisma from '../config/prisma.js';
 
 // sekalian masukkan ke db agar di record
 const createDonation = async (req, res) => {
@@ -82,7 +82,7 @@ const handleWebhook = async (req, res) => {
     }
 };
 
-module.exports = {
+export {
     createDonation,
     handleWebhook
 };

@@ -1,10 +1,11 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config({ override: true });
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config({ override: true });
 
-const donationRoutes = require('./routes/donationRoutes');
-const invoiceRoutes = require('./routes/invoiceRoutes');
-const paypalRoutes = require('./routes/paypalRoutes');
+import donationRoutes from './routes/donationRoutes.js';
+import invoiceRoutes from './routes/invoiceRoutes.js';
+import paypalRoutes from './routes/paypalRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -27,4 +28,4 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-module.exports = app;
+export default app;
