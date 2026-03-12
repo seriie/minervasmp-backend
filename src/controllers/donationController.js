@@ -1,6 +1,6 @@
 const prisma = require('../config/prisma');
 const snap = require('../config/midtrans');
-const { v4: uuidv4 } = require('uuid');
+const uuidv4 = require('uuid').v4;
 
 const createDonation = async (req, res) => {
   try {
