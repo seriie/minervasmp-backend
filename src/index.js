@@ -21,6 +21,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'healthy', message: 'Minerva SMP Backend is running (Modular JS)' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
