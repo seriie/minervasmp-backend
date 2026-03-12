@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Invoice {
+  id            String   @id @default(uuid())
+  transactionId String   @unique // e.g. 69abcdefgxxx
+  amount        Float
+  fee           Float
+  gateway       String   // e.g. xendit, midtrans, paypal, saweria
+  createdAt     DateTime @default(now())
+}
