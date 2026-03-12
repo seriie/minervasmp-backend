@@ -2,9 +2,9 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config({ override: true });
 
-const donationRoutes = require('./src/routes/donationRoutes');
-const invoiceRoutes = require('./src/routes/invoiceRoutes');
-const paypalRoutes = require('./src/routes/paypalRoutes');
+const donationRoutes = require('./routes/donationRoutes');
+const invoiceRoutes = require('./routes/invoiceRoutes');
+const paypalRoutes = require('./routes/paypalRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
