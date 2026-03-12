@@ -19,7 +19,7 @@ app.use('/api', invoiceRoutes);
 app.use('/api', paypalRoutes);
 
 app.get('/', (req, res) => {
-  res.json({ status: 'healthy', message: 'Minerva SMP Backend is running (Modular JS)' });
+  res.json({ status: 'healthy', message: 'Minerva SMP Backend is running' });
 });
 
 if (process.env.NODE_ENV !== 'production') {
