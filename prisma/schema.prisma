@@ -13,5 +13,7 @@ model Invoice {
   amount        Float
   fee           Float
   gateway       String   // e.g. xendit, midtrans, paypal, saweria
+  username      String?
+  message       String?
   createdAt     DateTime @default(now())
 }
