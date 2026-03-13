@@ -2,7 +2,7 @@ import paypal from '@paypal/checkout-server-sdk';
 import dotenv from 'dotenv';
 dotenv.config({ override: true });
 
-const environment = new paypal.core.SandboxEnvironment(
+const environment = new paypal.core.LiveEnvironment(
     process.env.PAYPAL_CLIENT_ID,
     process.env.PAYPAL_CLIENT_SECRET
 );
