@@ -1,7 +1,6 @@
 import { client, paypal } from "../config/paypal.js";
 import prisma from '../config/prisma.js';
 
-// sekalian masukkan ke db agar di record
 const createDonation = async (req, res) => {
     try {
         const { amount, username, message, return_url, cancel_url } = req.body;
@@ -62,7 +61,6 @@ const handleWebhook = async (req, res) => {
         const orderData = orderResponse.result;
 
         if (orderData.status === 'COMPLETED') {
-            // Process the completed order
             const amount = parseFloat(orderData.purchase_units[0].amount.value);
             
             let username = null;
