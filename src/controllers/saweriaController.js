@@ -8,8 +8,8 @@ export const createDonation = async (req, res) => {
         const transactionId = `MINERVA-${uuidv4().substring(0,10).toUpperCase()}`;
 
         // Convert the IDR amounts to USD
-        const finalAmountUSD = await convertIDRtoUSD(parseInt(amount_raw));
-        const finalFeeUSD = await convertIDRtoUSD(parseFloat(cut));
+        const finalAmountUSD = await convertIDRtoUSD(parseInt(amount_raw), 'IDR');
+        const finalFeeUSD = await convertIDRtoUSD(parseFloat(cut), 'IDR');
 
         const transaction = await prisma.invoice.create({
             data: {
